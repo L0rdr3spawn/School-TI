@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Einfache Website</title>
+    <style>
+        /* Einfaches CSS für die Gestaltung */
+        body {
+            text-align: center;
+            font-family: Arial;
+            padding: 50px;
+            background-color: lightblue;
+        }
+        
+        h1 {
+            color: darkblue;
+            font-size: 40px;
+        }
+        
+        p {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Das ist eine schöne Website</h1>
+    <p>Weiterleitung in <span id="countdown">20</span> Sekunden...</p>
+
+    <script>
+        // Einfache JavaScript-Funktion für den Countdown
+        let zeit = 20;
+        const anzeige = document.getElementById('countdown');
+
+        // Timer-Funktion, die jede Sekunde aufgerufen wird
+        function timer() {
+            zeit = zeit - 1;
+            anzeige.textContent = zeit;
+            
+            if (zeit <= 0) {
+                // Weiterleitung zu YouTube
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }
+        }
+
+        // Timer starten (wird jede Sekunde ausgeführt)
+        setInterval(timer, 1000);
+    </script>
+</body>
+</html>
